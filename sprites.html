@@ -39,15 +39,110 @@
 					</ul>
 					</section><br>
 				<section class="textblock">
-					<font size="6"><strong style="text-decoration: underline;">Sprites tutorial</strong></font><br>
+					<font size="6"><strong style="text-decoration: underline;">Sprites tutorial for users</strong></font><br>
 					<ul class="fit">
 						<li>Require <strong><a href="https://github.com/Snrasha/AnodeHeartModdings/releases">Texture Replacement Plugin</a></strong></li>
 						<li>Launch the game one time for let the plugin setup the folder.</li>
 						<li>Unzip the content on the AnodeHeart\ModAssets\Replacements\</li>
-						<li>Per example Averat need to be AnodeHeart\ModAssets\Replacements\Monsters\Averat</li>
-						<li>Player need to be AnodeHeart\ModAssets\Replacements\Player</li>
+						<li><strong>Monsters</strong> (ex:Averat) need to be AnodeHeart\ModAssets\Replacements\Monsters\Averat</li>
+						<li><strong>Player</strong> need to be AnodeHeart\ModAssets\Replacements\Player</li>
+						<li><strong>Floaty</strong> need to be AnodeHeart\ModAssets\Replacements\Floaty</li>
+
 					</ul>
-				</section><br>
+</section><br>
+<section class="textblock">
+					<font size="6"><strong style="text-decoration: underline;">Sprites tutorial for spriters</strong></font><br>
+
+					<font size="4"><strong style="text-decoration: underline;">Monsters</strong></font><br>
+					<div>
+						Download the Saplee example on <a class="navigation" href="pages/sprites_monsters.html">Monsters</a>.<br>
+						Every sprites of a monster are optional. The folder of the monster need to be the Monster name. Always put the correct Uppercase.<br>
+						A monster has:
+						 <ul class="fit">
+	 						<li>3 battles sprites. Saplee_Front.png, Saplee_AltFront.png and Saplee_Glitch.png</li>
+	 						<li>Some monster do not have a Glitch one (Saplee do not have one per example)</li>
+							<li>2 Icon sprites. Saplee_Icon.png and Saplee_AltIcon.png</li>
+							<li>2 Animations. Saplee_Idle.png and Saplee_Walk.png</li>
+							<li>Many monsters do not have them because you cannot meet them on the wild. Some do not have an idle, others doesn't have walk</li>
+	 					</ul>
+					</div>
+					<br><hr><br>
+					<font size="4"><strong style="text-decoration: underline;">Player</strong></font><br>
+					<div>
+						Download the Player example on <a class="navigation" href="pages/sprites_player.html">Player</a>.<br>
+						Every sprites of the Player are optional. Every filename need to be correct. Delete sprites than you wannot replace (like lowres).<br>
+
+						Player has:
+						 <ul class="fit">
+	 						<li>4 Portraits: Default, Blink, XD, Cry</li>
+	 						<li>12 Base Animations</li>
+							<li>2 AirBoat Animations, for a Minigame</li>
+							<li>2 LowRes Animations, when you use the teleporter</li>
+							<li>2 Flatland Animations, for a Minigame</li>
+							<li>2 Scooter Animations, for the vehicle</li>
+							<li>1 Icon, for the worldmap</li>
+	 					</ul>
+					</div>
+					<br><hr><br>
+					<font size="4"><strong style="text-decoration: underline;">Floaty</strong></font><br>
+					<div>
+						Download any <a class="navigation" href="pages/sprites_player.html">Floaty</a>.<br>
+						The Floaty is one of the most complex. The floaty is the orb following you. It exist a flatland version for the minigame.<br>
+						The plugin let you replace it with many different ways.<br>
+						But firstly: The Flatland orb is independant from the Default Orb. If you replace one, it will not replace the other one.<br>
+						<section class="subtextblock">
+							<hr><br>
+						<strong>Nomenclature:</strong><br>
+						Orb[4][_Flatland][_Idle/Walk/Run][_number].png<br>
+						<ul class="fit">
+						 <li>Orb/Orb4, Orb is if you want just the Front direction. Orb4 is for have Left, Back, Right, Front</li>
+						 <li>[_Flatland], add _FlatLand for the floaty affect the Flatland minigame</li>
+						 <li>[_Idle/Walk/Run], for each animation. If no walk/run, they will be ignored. You do not need to have Walk and Run. Walk or Run work too</li>
+						 <li>[_number], Required, precise the number of frames of the animation. Per default 4</li>
+					 </ul>
+					 </section>
+					 <section class="subtextblock">
+						 <hr><br>
+						<strong>First Example:</strong> Standard Orb with Flatland.<br>
+						<img src="images/floatys/Orb_Player.png" /><br>
+						<ul class="fit">
+						 <li>Orb_Idle_4.png</li>
+						 <li>Orb_Flatland_Idle_4.png</li>
+					 </ul>
+				 </section>
+
+					 <section class="subtextblock">
+						 <hr><br>
+					 <strong>Second Example:</strong> Standard Orb with 8 frames.<br>
+					 <ul class="fit">
+						<li>Orb_Idle_8.png</li>
+						<li>You can replace the last number with the frame than you want for your floaty</li>
+					</ul>
+				</section>
+
+				<section class="subtextblock">
+					<hr><br>
+				<strong>Third Example:</strong> Orb with directions<br>
+				<img src="images/floatys/Orb_Mirasein.png" /><br>
+				<ul class="fit">
+				 <li>Orb4_Idle_4.png</li>
+				 <li>The 4 of Orb4 is what say than we have 4 directions</li>
+			 </ul>
+			 <section class="subtextblock">
+				 <hr><br>
+			 <strong>Four Example:</strong> Pet.<br>
+			 <ul class="fit">
+				<li>Orb4_Idle_4.png</li>
+				<li>Orb4_Walk_4.png</li>
+				<li>Orb4_Run_4.png</li>
+				<li>You are nothing without a small cat following you</li>
+			</ul>
+
+		 </section>
+			</div>
+
+
+				</section>
 			</center>
 		</section>
 	</div>

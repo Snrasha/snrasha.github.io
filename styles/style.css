@@ -73,9 +73,10 @@ section.textblock{
   padding-left: 40px;
   background-color: #333333;
   padding: 10px 10px;
-
 }
-
+section.subtextblock{
+  padding: 10px 80px;
+}
 b, strong {
   font-weight: 700;
 }
