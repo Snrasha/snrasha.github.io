@@ -106,15 +106,10 @@ div.footer-menu{
   padding-left: 20px;
   padding-right: 20px;
 }
+table.followers td{
+  padding:5px;
+}
 
-/*#endregion*/
-
-/*
-    ########################################
-    NAVIGATION
-    ########################################
-*/
-/*#region Containers*/
 
 section.header{
   padding-top: 00px;
@@ -138,9 +133,6 @@ width: fit-content;
   text-align: left;
 }
 
-
-/*#endregion*/
-/*#region Banner*/
 
 .center {
   width: 100%;
