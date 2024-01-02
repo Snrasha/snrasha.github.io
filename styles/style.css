@@ -27,6 +27,12 @@ ul.navigation > li {
   display: inline-block;
 }
 
+img.iconfollower{
+  width:64px;
+  height:64px;
+  image-rendering: pixelated;
+}
+
 li.navigation > a{
   display: block;
   text-align: center;
