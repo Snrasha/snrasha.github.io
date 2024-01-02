@@ -48,6 +48,19 @@ body{
   background-color: #1d1d1d;
 }
 
+ul.followers {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul.followers li {
+  float: left;
+  padding: 0px 10px;
+}
+
 section.body{
   /*background-color: #333333;*/
   width:90%;
