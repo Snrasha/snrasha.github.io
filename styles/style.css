@@ -74,10 +74,19 @@ ul.credits li {
 }
 
 li.follower1 {
-  background-color: #233333;
+  background-color: #133333;
 }
 li.follower2 {
-  background-color: #332333;
+  background-color: #331333;
+}
+li.follower3 {
+  background-color: #333313;
+}
+li.follower4 {
+  background-color: #331313;
+}
+li.follower5 {
+  background-color: #133313;
 }
 section.body{
   /*background-color: #333333;*/
