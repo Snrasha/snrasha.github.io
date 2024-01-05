@@ -59,6 +59,8 @@ ul.followers {
 ul.followers li {
   float: left;
   padding: 0px 10px;
+  margin: 5px 5px 0px 0px;
+  width: 100px;
 }
 
 ul.credits {
@@ -71,23 +73,56 @@ ul.credits {
 ul.credits li {
   float: left;
   padding: 0px 10px;
+  margin: 5px 5px 0px 0px;
+  width: 150px;
+
 }
 
-li.follower1 {
+li.follower_snrasha {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000;
   background-color: #13b3b3;
 }
-li.follower2 {
+li.follower_mirasein {
+    border-width: 2px;
+  border-style: solid;
+  border-color: #000;
   background-color: #b313b3;
 }
-li.follower3 {
+li.followertodo {
+    border-width: 2px;
+  border-style: solid;
+
+  border-color: #000;
+  background-color: #03b303;
+
+}
+li.followerlater {
+    border-width: 2px;
+  border-style: solid;
+  border-color: #000;
+  background-color: #030303;
+}
+li.follower_claim_mirasein {
+    border-width: 2px;
+  background-color: #b3b313;
+  border-style: solid;
+border-color:  #b313b3;
+}
+li.follower_claim_jh {
+    border-width: 2px;
+  background-color: #033303;
+  border-style: solid;
   background-color: #b3b313;
 }
-li.follower4 {
-  background-color: #331313;
+li.follower_claim_snrasha {
+    border-width: 2px;
+  border-color:  #13b3b3;
+  border-style: solid;
+  background-color: #b3b313;
 }
-li.follower5 {
-  background-color: #033303;
-}
+
 section.body{
   /*background-color: #333333;*/
   width:90%;
