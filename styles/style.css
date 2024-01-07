@@ -62,6 +62,12 @@ ul.followers li {
   margin: 5px 5px 0px 0px;
   width: 100px;
 }
+span.has_alt {
+  background-color: #030303;
+  padding: 0px 3px;
+
+}
+
 
 ul.credits {
   width: fit-content;
