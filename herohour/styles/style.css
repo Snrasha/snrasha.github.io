@@ -1,0 +1,274 @@
+/*
+    ########################################
+    GENERAL
+    ########################################
+*/
+/*#region Global*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+  color: #FFFFFF;
+  /* font-family: Quicksand,Helvetica,sans-serif; */
+}
+
+section.navigation_section{
+  background-color: #333;
+  text-align: center;
+}
+
+input.button{
+  display: inline-block;
+  padding: 10px;
+  background: #04AA6D;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #ffffff;
+  /* margin-left: 10px; */
+  font-size: 16px;
+  margin-bottom: 5px;
+
+  border-color: #333;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input.buttondisabled{
+  display: inline-block;
+  padding: 10px;
+  background: #8c8c8c;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #ffffff;
+  /* margin-left: 10px; */
+  font-size: 16px;
+  margin-bottom: 5px;
+
+  border-color: #333;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input.button:hover{
+  background: #048A6D;
+}
+input.blacktext{
+  color: #000;
+}
+
+/* ul.navigation {
+  display: flex;
+  flex-wrap: wrap;
+} */
+ul.navigation > li {
+  display: inline-block;
+}
+
+img.iconfollower{
+  width:64px;
+  height:64px;
+  image-rendering: pixelated;
+}
+
+li.navigation > a{
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #3f3f3f;
+}
+li.navigation > a:hover{
+  background-color: #415464;
+}
+
+body{
+  background-color: #1d1d1d;
+}
+
+ul.followers {
+  width: fit-content;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul.followers li {
+  float: left;
+  padding: 0px 10px;
+  margin: 5px 5px 0px 0px;
+  width: 100px;
+}
+span.has_alt {
+  background-color: #030303;
+  padding: 0px 3px;
+
+}
+
+
+ul.credits {
+  width: fit-content;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+ul.credits li {
+  float: left;
+  padding: 0px 10px;
+  margin: 5px 5px 0px 0px;
+  width: 150px;
+
+}
+
+li.follower_snrasha {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000;
+  background-color: #13b3b3;
+}
+li.follower_mirasein {
+    border-width: 2px;
+  border-style: solid;
+  border-color: #000;
+  background-color: #b313b3;
+}
+li.followertodo {
+    border-width: 2px;
+  border-style: solid;
+
+  border-color: #000;
+  background-color: #b30303;
+
+}
+li.followerlater {
+    border-width: 2px;
+  border-style: solid;
+  border-color: #000;
+  background-color: #030303;
+}
+li.follower_claim_mirasein {
+    border-width: 2px;
+  background-color: #b3b313;
+  border-style: solid;
+border-color:  #b313b3;
+}
+li.follower_claim_jh {
+    border-width: 2px;
+  background-color: #033303;
+  border-style: solid;
+  background-color: #b3b313;
+}
+li.follower_claim_snrasha {
+    border-width: 2px;
+  border-color:  #13b3b3;
+  border-style: solid;
+  background-color: #b3b313;
+}
+
+section.body{
+  /*background-color: #333333;*/
+  width:90%;
+  max-width:1200px;
+  margin: 30px auto;
+  padding: 00px 10px;
+  /* text-align: center; */
+  /* display: flex; */
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 8rem;    /* Footer height */
+}
+
+@media only screen and (max-width: 600px) {
+  #content-wrap {
+    padding-bottom: 16rem;    /* Footer height */
+  }
+}
+
+
+section.textblock{
+  display: block;
+  padding-left: 40px;
+  background-color: #333333;
+  padding: 10px 10px;
+}
+section.subtextblock{
+  padding: 10px 80px;
+}
+b, strong {
+  font-weight: 700;
+}
+
+
+/*#endregion*/
+/*#region Chart*/
+
+input.blacktext{
+  color: #000;
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #415464;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 2px 0px 0px 0px;
+}
+
+div.footer-menu{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+table.followers td{
+  padding:5px;
+}
+
+
+section.header{
+  padding-top: 00px;
+  padding-bottom: 00px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  background-color: yellow;
+
+  /* background-color: #415464; */
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+
+ul.fit {
+width: fit-content;
+  text-align: left;
+}
+
+
+.center {
+  width: 100%;
+  object-fit:cover;
+}

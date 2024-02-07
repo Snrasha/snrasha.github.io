@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="header_head">
+	<title>Tools for dummies</title>
+	  <meta name="description" content="Tools for dummies">
+	  <meta name="keywords" content="Hero's Hour, Hero Hour">
+	  <meta charset="UTF-8">
+	  <link rel="icon" href="/images/icon_hh.png">
+		<link rel="shortcut icon" href="images/icon_hh.png">
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+	<div id="page-container">
+		<div id="content-wrap">
+			<section id="section_navigation">
+				<section class="header">
+					<img  height="226px" src="../images/hh_header.jpg" />
+				</section>
+				<section class="navigation_section">
+				<ul class="navigation">
+				<li class="navigation"><a class="navigation" href="index.html">Main</a></li>
+				<li class="navigation"><a class="navigation" href="animation.html">Animation</a></li>
+				</ul>
+				</section>
+			</section>
+
+			<section class="body">
+				<section class="textblock">
+
+				<center><font size="6"><strong>Generate Animation from the spritesheet</strong></font><br>
+
+						<form class="standard_form" id="form_gif_generate">
+							<label class="standard_form">Ping Snrasha on Discord for any feedback, idea or typo.</label><br>
+							<label class="standard_form">The animation of unit and hero will let people see more of the animation. The death animation is at the near end.</label><br>
+							<label class="standard_form"><strong > Double Background: </strong><input aria-labelledby="form_gif_generate" type="checkbox" id="double_bg_checkbox"  checked></label><br>
+							<label class="standard_form"><strong > Hero's Hour animation (much longer): </strong><input aria-labelledby="form_gif_generate" type="checkbox" id="animation_checkbox" ></label><br>
+
+							<label class="standard_form"><strong > Scale: </strong><input class="blacktext" aria-labelledby="form_gif_generate" type="number" id="input_scale" value="6"  min="1" max="9"></label><br>
+							<label class="standard_form">Do you want the animation of the unit or hero ?</label><br>
+							<label class="standard_form"><strong>Unit:</strong> <input aria-labelledby="form_gif_generate" type="file" id="input_unit" accept=".png"/></label><br>
+							<label class="standard_form"><strong>Overworld Hero:</strong> <input aria-labelledby="form_gif_generate" type="file" id="input_hero" accept=".png"/></label><br>
+							<input id="create_gif_button" class="button" type="button" value="Download">
+						</form>
+				</section>
+
+				</section>
+			</div>
+			<script src="../libs/DynamicByteArray.js"></script>
+			<script  src="../libs/LZWEncoder.js"></script>
+			<script  src="../libs/NeuQuant.js"></script>
+			<script  src="../libs/GIFEncoder.js"></script>
+			<script type="module" src="../scripts/animation.js"></script>
+<footer id="footer_bottom">
+	<div  class="footer-menu">
+		<span class="footer-menu">
+		Hero's Hour	<a href="https://store.steampowered.com/app/1656780/Heros_Hour/">Steam page</a></br>
+    Hero's Hour <a href="https://discord.gg/9zpWsA24uk">Discord</a></br>
+		<a href="https://github.com/joshi1983/jsgif">GifEncoder Lib</a>, many modification has be done on the GIFEncoder.js for the transparency.
+		</span>
+	</div>
+</footer>
+		</div>
+	</body>
+</html>

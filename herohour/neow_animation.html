@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="header_head">
+	<title>Tools for dummies</title>
+	  <meta name="description" content="Tools for dummies">
+	  <meta name="keywords" content="Infinite Tools, Hero's Hour, Hero Hour">
+	  <meta charset="UTF-8">
+	  <link rel="icon" href="/images/icon_hh.png">
+		<link rel="shortcut icon" href="/images/icon_hh.png">
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+	<div id="page-container">
+		<div id="content-wrap">
+			<section id="section_navigation">
+	<section class="header">
+		<img class="center" height="226px" src="/images/banner_hh.jpg" />
+		<div class="top-left">For Neow animation</div>
+	</section>
+	<section class="navigation_section">
+		<ul class="navigation">
+			<li class="navigation"><a class="navigation" href="index.html">Main</a></li>
+			<li class="navigation"><a class="navigation" href="animation.html">Animation</a></li>
+			<li class="navigation"><a class="navigation" href="skilltree.html">Hero Editor</a></li>
+		</ul>
+	</section>
+</section>
+
+			<section class="body">
+				<center><font size="6"><strong>Generate Animation from the spritesheet</strong></font><br>
+
+					<div class="standard_form_container">
+						<form class="standard_form" id="form_gif_generate">
+							<label class="standard_form">Ping Snrasha on Discord for any feedback, idea or typo.</label><br>
+							<label class="standard_form"><strong > Scale: </strong><input class="blacktext" aria-labelledby="form_gif_generate" type="number" id="input_scale" value="6"  min="1" max="9"></label><br>
+							<label class="standard_form"><strong>Unit:</strong> <input aria-labelledby="form_gif_generate" type="file" id="input_unit" accept=".png"/></label><br>
+							<input id="create_gif_button" class="button" type="button" value="Download">
+						</form>
+					</div>
+				</section>
+			</div>
+			<script src="../libs/DynamicByteArray.js"></script>
+			<script  src="../libs/LZWEncoder.js"></script>
+			<script  src="../libs/NeuQuant.js"></script>
+			<script  src="../libs/GIFEncoder.js"></script>
+			<script type="module" src="../scripts/neow_animation.min.js"></script>
+<footer id="footer_bottom">
+	<div  class="footer-menu">
+		<span class="footer-menu">
+		</span>
+	</div>
+</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="header_head">
+	<title>Tools for dummies</title>
+	<meta name="description" content="Tools for dummies">
+	<meta name="keywords" content="Infinite Tools, Hero's Hour, Hero Hour">
+	<meta charset="UTF-8">
+	<link rel="icon" href="/images/icon_hh.png">
+	<link rel="shortcut icon" href="/images/icon_hh.png">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+	<div id="page-container">
+		<div id="content-wrap">
+			<section id="section_navigation">
+				<section class="header">
+					<img class="center" height="226px" src="/images/banner_hh.jpg" />
+					<div class="top-left">Not affiliated with Hero's Hour</div>
+				</section>
+				<section class="navigation_section">
+					<ul class="navigation">
+						<li class="navigation"><a class="navigation" href="index.html">Main</a></li>
+						<li class="navigation"><a class="navigation" href="animation.html">Animation</a></li>
+						<li class="navigation"><a class="navigation" href="skilltree.html">Hero Editor</a></li>
+					</ul>
+				</section>
+			</section>
+
+			<section class="body">
+				<center><font size="6"><strong>Edit Heroes</strong></font><br>
+
+					<div class="skills_div">
+
+						<div class="standard_form_container background_left">
+							<form class="standard_form" >
+								<label class="standard_form">Ping Snrasha on Discord for any feedback, idea or typo.</label><br>
+								<label class="standard_form"><strong>Mod:</strong> <input type="file" id="input_mod" webkitdirectory/></label><br>
+								<label class="standard_form"><strong>DLC: </strong><input type="checkbox" id="dlc_checkbox"  checked></label><br>
+
+								<input id="load_button" class="button" type="button" value="Load">
+							</form>
+						</div>
+						<div  class="background_right">
+							<ul  class="faq">
+								<li>Load your mod, will load every skills, heroes. Will ignore the rest.</li>
+								<li>In the left:</li>
+								<li>In the search bar, you can search your skill. Write "Attack" for see every related skill about it. Or directly the name of the skill.</li>
+								<li>Click on any skill for display the description</li>
+								<li>In the middle:</li>
+								<li>Click on a skill slot. Then click on the skill on the left list for replace it</li>
+								<li>Click again on a skill slot for lost focus</li>
+								<li>Click on the left skill than you want add. Then click on a skill slot</li>
+								<li>Any duplicate will be red.</li>
+								<li>In the Bottom:</li>
+								<li>You can choose the hero than you want modify.</li>
+								<li>Set the name, unit, class (for neutral hero)</li>
+								<li>Download the modified hero.</li>
+							</ul>
+						</div>
+					</div>
+					<!-- <div id="layout_skills"  class="skills_div"> -->
+					<div id="layout_skills"  class="hidden">
+						<div class="background_base">
+							<input type="text" class="blacktext" id="search_input"  placeholder="Search for skills/description">
+							<nav class="skilltree">
+								<ul id="skills_list" class="skilltree">
+								</ul>
+							</nav>
+							<strong>Skill Description:</strong><br>
+							<div id="skill_description">bla1 bla bla bla bla2 bla bla bla bla bla3 bla bla bla bla4 bla bla</div></div>
+
+							<div>
+								<canvas id="canvas_skilltree"></canvas>
+								<div class="background_bottom">
+
+									<nav class="skilltree">
+										<ul id="heroes_list" class="skilltree">
+										</ul>
+									</nav>
+
+									<form class="standard_form" >
+										<label class="standard_form"><strong id="filename_text">Filename</strong></label>
+
+										<label class="standard_form"><strong>Name: </strong><input aria-labelledby="form_chart_generate" class="blacktext" id="name_hero_input" type="text"></label>
+										<label class="standard_form"><strong>Unit: </strong><input aria-labelledby="form_chart_generate" class="blacktext" id="unit_hero_input" type="text"></label>
+										<label class="standard_form"><strong>Class: </strong><input aria-labelledby="form_chart_generate" class="blacktext"  id="class_hero_input" type="text"></label>
+										<input id="save_button" class="button" type="button" value="Download">
+									</form>
+									<strong>Skill Description:</strong><br>
+									<div id="skill_rect_description">bla1 bla bla bla bla2 bla bla bla bla bla3 bla bla bla bla4 bla bla</div>
+
+								</div>
+							</div>
+						</div>
+					</section>
+
+
+
+				</div>
+				<script type="module" src="../scripts/fileLoad.min.js"></script>
+				<script type="module" src="../scripts/hhskilltree.min.js"></script>
+				<footer id="footer_bottom">
+					<div  class="footer-menu">
+						<span class="footer-menu">
+							Hero's Hour	<a href="https://store.steampowered.com/app/1656780/Heros_Hour/">Steam page</a></br>
+							Hero's Hour <a href="https://discord.gg/9zpWsA24uk">Discord</a></br>
+						</span>
+					</div>
+				</footer>
+			</div>
+</body>
+</html>
