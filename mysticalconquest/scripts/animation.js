@@ -11,8 +11,8 @@ create_gif_button.onclick = function() {
 
 
 
-  document.getElementById('input_unit').value = null;
-  document.getElementById('input_shadow').value = null;
+  // document.getElementById('input_unit').value = null;
+  // document.getElementById('input_shadow').value = null;
 
   create_gif_button.disabled=true;
 
