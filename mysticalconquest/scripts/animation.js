@@ -1,9 +1,11 @@
 var create_gif_button =document.getElementById('create_gif_button');
 
+let divide=12;
 create_gif_button.onclick = function() {
   if(create_gif_button.disabled){
     return;
   }
+
 
   var input_scale=document.getElementById('input_scale').value;
   var file_unit=document.getElementById('input_unit').files;
@@ -55,7 +57,7 @@ function startCreatingGif(input_scale,file_unit,file_shadow) {
     img.src = imageSrc;
   }
   addImage(URL.createObjectURL(file_unit[0]),false);
-  addImage(URL.createObjectURL(file_shadow[0]),false);
+  addImage(URL.createObjectURL(file_shadow[0]),true);
 }
 
 function setupContext(ctx,color){
@@ -132,7 +134,7 @@ function getTransparentColor(image){
 }
 
 function getFramesUnit(image){
-  var width=image.width/13;
+  var width=image.width/divide;
   var height=image.height;
   var fattyarr=[];
   var arr=[];
@@ -170,8 +172,8 @@ function getFramesUnit(image){
 function startEncoder(namefile,arrimage,input_scale){
   var canvas = document.createElement("canvas");
   var ctx =   canvas.getContext('2d');
+  console.log(arrimage[0].width);
   var transparentColor=getTransparentColor(arrimage[0]);
-  let divide=12;
   var width=arrimage[0].width/divide*input_scale;
   var height=arrimage[0].height*input_scale;
 
@@ -187,7 +189,7 @@ function startEncoder(namefile,arrimage,input_scale){
 
   encoder.setRepeat(0); //0  -> loop forever
   //1+ -> loop n times then stop
-  encoder.setDelay(200); //go to next frame every n milliseconds
+  encoder.setDelay(150); //go to next frame every n milliseconds
 
   encoder.start();
 
@@ -199,12 +201,11 @@ function startEncoder(namefile,arrimage,input_scale){
   let destList=[];
 
     fattyarr=  getFramesUnit(arrimage[0]);
-    fattyarr_Shadow=  getFramesUnit(arrimage[1]);
 
     let anim=[0,0,1,1,1,0,0,2,0,0,2];
     for (let i=0;i<anim.length;i++){
       for(let j=0;j<fattyarr[anim[i]].length;j++){
-        destList.push([fattyarr[anim[i]][j],fattyarr_Shadow[anim[i]][j]]);
+        destList.push(fattyarr[anim[i]][j]);
       }
     }
   var gray="#b4b4b4";
@@ -215,12 +216,12 @@ function startEncoder(namefile,arrimage,input_scale){
     setupContext(ctx,transparentColor[0]);
     // ctx.fillRect(0,0,width,height);
     ctx.fillRect(0,0,width,height);
-    ctx.drawImage(image,destList[i][0][1], destList[i][1][1],destList[i][2][1],destList[i][3][1],0,0,width,height);
-    ctx.drawImage(image,destList[i][0][0], destList[i][1][0],destList[i][2][0],destList[i][3][0],0,0,width,height);
+    ctx.drawImage(arrimage[1],destList[i][0], destList[i][1],destList[i][2],destList[i][3],0,0,width,height);
+    ctx.drawImage(arrimage[0],destList[i][0], destList[i][1],destList[i][2],destList[i][3],0,0,width,height);
     setupContext(ctx,gray);
     ctx.fillRect(width,0,width,height);
-    ctx.drawImage(image,destList[i][0][1], destList[i][1][1],destList[i][2][1],destList[i][3][1],width,0,width,height);
-    ctx.drawImage(image,destList[i][0][0], destList[i][1][0],destList[i][2][0],destList[i][3][0],width,0,width,height);
+    ctx.drawImage(arrimage[1],destList[i][0], destList[i][1],destList[i][2],destList[i][3],width,0,width,height);
+    ctx.drawImage(arrimage[0],destList[i][0], destList[i][1],destList[i][2],destList[i][3],width,0,width,height);
 
     encoder.addFrame(ctx);
   }
