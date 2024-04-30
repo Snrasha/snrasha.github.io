@@ -28,11 +28,7 @@ function startCreatingGif(input_scale,file_unit,file_shadow) {
     input_scale=1;
   }
 
-  var imageSrc;
-  var namefile;
-
-
-  nameunit=file_unit[0]["name"];
+  var nameunit=file_unit[0]["name"];
 
   let count=0;
   let arrayImg=new Array(2);
