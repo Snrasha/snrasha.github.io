@@ -33,7 +33,7 @@ function startCreatingGif(input_scale,file_unit,file_shadow) {
   let count=0;
   let arrayImg=new Array(2);
 
-  function addImage(src,shadow){
+  function addImage(imageSrc,shadow){
     var img = new Image();
     count++;
 
