@@ -142,8 +142,8 @@ function getFramesUnit(image){
   arr.push([width*1,0,width,height])
   arr.push([width*2,0,width,height])
   arr.push([width*3,0,width,height])
-  arr.push([width*2,0,width,height])
-  arr.push([width*1,0,width,height])
+  // arr.push([width*2,0,width,height])
+  // arr.push([width*1,0,width,height])
 
 
 
