@@ -137,17 +137,20 @@ function getFramesUnit(image){
   var width=image.width/divide;
   var height=image.height;
   var fattyarr=[];
-  var arr=[];
-  arr.push([width*0,0,width,height])
-  arr.push([width*1,0,width,height])
-  arr.push([width*2,0,width,height])
-  arr.push([width*3,0,width,height])
+  var arr;
+  // arr.push([width*0,0,width,height])
+  // arr.push([width*1,0,width,height])
+  // arr.push([width*2,0,width,height])
+  // arr.push([width*3,0,width,height])
   // arr.push([width*2,0,width,height])
   // arr.push([width*1,0,width,height])
 
-
-
+  arr=[];
+  for(let i=0;i<4;i++){
+    arr.push([width*i,0,width,height])
+  }
   fattyarr.push(arr);
+
   arr=[];
   for(let i=4;i<8;i++){
     arr.push([width*i,0,width,height])
@@ -157,11 +160,11 @@ function getFramesUnit(image){
   for(let i=8;i<12;i++){
     arr.push([width*i,0,width,height])
   }
-  fattyarr.push(arr);
-  arr=[];
-  arr.push([width*0,0,width,height])
-  arr.push([width*12,0,width,height])
-  arr.push([width*12,0,width,height])
+  // fattyarr.push(arr);
+  // arr=[];
+  // arr.push([width*0,0,width,height])
+  // arr.push([width*12,0,width,height])
+  // arr.push([width*12,0,width,height])
 
   fattyarr.push(arr)
   return fattyarr;
@@ -172,7 +175,7 @@ function getFramesUnit(image){
 function startEncoder(namefile,arrimage,input_scale){
   var canvas = document.createElement("canvas");
   var ctx =   canvas.getContext('2d');
-  console.log(arrimage[0].width);
+  // console.log(arrimage[0].width);
   var transparentColor=getTransparentColor(arrimage[0]);
   var width=arrimage[0].width/divide*input_scale;
   var height=arrimage[0].height*input_scale;
@@ -222,6 +225,8 @@ function startEncoder(namefile,arrimage,input_scale){
     ctx.fillRect(width,0,width,height);
     ctx.drawImage(arrimage[1],destList[i][0], destList[i][1],destList[i][2],destList[i][3],width,0,width,height);
     ctx.drawImage(arrimage[0],destList[i][0], destList[i][1],destList[i][2],destList[i][3],width,0,width,height);
+//
+    // console.log(i+" "+destList[i][0])
 
     encoder.addFrame(ctx);
   }
