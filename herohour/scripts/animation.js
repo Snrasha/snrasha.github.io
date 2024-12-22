@@ -8,12 +8,15 @@ create_gif_button.onclick = function() {
   var double_bg_checkbox=document.getElementById('double_bg_checkbox').checked?1:2;
   var animation_checkbox=document.getElementById('animation_checkbox').checked?1:2;
   var input_scale=document.getElementById('input_scale').value;
-  var file_unit=document.getElementById('input_unit').files;
-  var file_hero=document.getElementById('input_hero').files;
+  var file_unit=  [...document.getElementById('input_unit').files];
+  var file_hero=  [...document.getElementById('input_hero').files];
+
+  console.log(file_unit);
+  console.log(file_hero);
+
   if(file_hero.length==0 && file_unit.length==0){
     return;
   }
-
   document.getElementById('input_unit').value = null;
   document.getElementById('input_hero').value = null;
   create_gif_button.disabled=true;
@@ -49,7 +52,7 @@ function startCreatingGif(double_bg_checkbox,animation_checkbox,input_scale,file
     imageSrc=file_unit[0];
     namefile=file_unit[0]["name"];
   }
-  loadImage(imageSrc,SetImage,namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox)
+  loadImage(imageSrc,SetImage,namefile,isHero,input_scale,double_bg_checkbox,animation_checkbox)
 
   // var img = new Image();
   // img.onload = function(){
@@ -61,7 +64,7 @@ function startCreatingGif(double_bg_checkbox,animation_checkbox,input_scale,file
   // };
   // img.src = imageSrc;
 }
-function SetImage(imageSrc,namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox){
+function SetImage(imageSrc,namefile,isHero,input_scale,double_bg_checkbox,animation_checkbox){
   var img = new Image();
   img.onload = function(){
     startEncoder(namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox);
@@ -74,10 +77,10 @@ function SetImage(imageSrc,namefile,img,isHero,input_scale,double_bg_checkbox,an
 }
 
 
-function loadImage(file,next,namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox){
+function loadImage(file,next,namefile,isHero,input_scale,double_bg_checkbox,animation_checkbox){
   var fr = new FileReader();
   fr.onload = function () {
-      next(fr.result,namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox);
+      next(fr.result,namefile,isHero,input_scale,double_bg_checkbox,animation_checkbox);
   }
   fr.readAsDataURL(file);
 }
