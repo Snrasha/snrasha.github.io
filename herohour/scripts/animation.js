@@ -35,15 +35,33 @@ function startCreatingGif(double_bg_checkbox,animation_checkbox,input_scale,file
   var namefile;
 
   if(isHero){
-    imageSrc=URL.createObjectURL(file_hero[0]);
+    imageSrc=file_hero[0];
     namefile=file_hero[0]["name"];
   }
   else{
-    imageSrc=URL.createObjectURL(file_unit[0]);
+    // console.log(file_unit);
+    // var fr = new FileReader();
+    // fr.onload = function () {
+    //     document.getElementById(outImage).src = fr.result;
+    // }
+    // fr.readAsDataURL(files[0]);
+
+    imageSrc=file_unit[0];
     namefile=file_unit[0]["name"];
-
   }
+  loadImage(imageSrc,SetImage,namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox)
 
+  // var img = new Image();
+  // img.onload = function(){
+  //   startEncoder(namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox);
+  // };
+  // img.onerror= function(){
+  //   create_gif_button.disabled=false;
+  //
+  // };
+  // img.src = imageSrc;
+}
+function SetImage(imageSrc,namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox){
   var img = new Image();
   img.onload = function(){
     startEncoder(namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox);
@@ -53,7 +71,15 @@ function startCreatingGif(double_bg_checkbox,animation_checkbox,input_scale,file
 
   };
   img.src = imageSrc;
+}
 
+
+function loadImage(file,next,namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox){
+  var fr = new FileReader();
+  fr.onload = function () {
+      next(fr.result,namefile,img,isHero,input_scale,double_bg_checkbox,animation_checkbox);
+  }
+  fr.readAsDataURL(file);
 }
 
 function setupContext(ctx,color){
