@@ -11,8 +11,8 @@ create_gif_button.onclick = function() {
   var file_unit=  [...document.getElementById('input_unit').files];
   var file_hero=  [...document.getElementById('input_hero').files];
 
-  console.log(file_unit);
-  console.log(file_hero);
+  // console.log(file_unit);
+  // console.log(file_hero);
 
   if(file_hero.length==0 && file_unit.length==0){
     return;
