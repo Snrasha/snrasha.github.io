@@ -161,7 +161,10 @@ ul.fit {
 width: fit-content;
   text-align: left;
 }
-
+ul.fit50 {
+  width: 50%;
+  text-align: left;
+}
 
 .center {
   width: 100%;
